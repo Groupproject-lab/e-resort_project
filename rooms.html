@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Rooms</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Room Types</h2>
+  <ul>
+    <li>Standard Room - $100/night</li>
+    <li>Deluxe Room - $150/night</li>
+    <li>Suite - $250/night</li>
+  </ul>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navbar Over Image</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-image {
+    position: relative; /* This allows positioning of the navbar inside it */
+    background-image: url('https://via.placeholder.com/1200x600'); /* Replace with your image */
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+
+  .navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </div>
+</div>
+
+</body>
+</html>
