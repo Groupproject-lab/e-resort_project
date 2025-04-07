@@ -1,47 +1,110 @@
-body {
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+body,html {
+  overflow: visible;
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0%;
-  background: #f0f8ff;
+  padding: 0;
+  background: linear-gradient(135deg, #fdf0f0, #f3d9dc);
+
 }
-.hero-image{
-  position: relative;
-    background-image: url(/image/fb532761596b2fe50a6932e2d79db233.webp);
-    height: 500px;
-    background-size: cover;
-    background-position: center;
-}
-.navbar{
-  position: absolute;
-  margin-top: 40px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px 0;
-  text-align: center;
-}
-.navbar a {
+.resort-header {
   color: white;
-  text-decoration: none;
-  padding: 15px 20px;
-  font-size: 18px;
-  transition: all 0.3s ease; /* Smooth transition */
-  position: relative;
-  display: inline-block;
-}
-.navbar a::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: rgb(223, 177, 177);
-  left: 0;
-  bottom: 0;
-  transition: width 0.3s ease; /* Smooth underline animation */
-  margin-top: 2px;
+  overflow: visible;
 }
 
-.navbar a:hover::after {
-  width: 100%;
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 30px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #264b73;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+.logo .highlight {
+  color: #e91e63;
+}
+
+.contact {
+  font-size: 16px;
+  color: white;
+}
+
+.top-icons {
+  font-size: 14px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.divider {
+  margin: 0 8px;
+  color: #ccc;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  color: white;
+}
+
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  background-color: #e91e63;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-nav li {
+  margin: 0 15px;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #ffdce7;
+}
+
+.cart {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.hero-image{
+  position: relative;
+  background-image: url(/image/1000_F_55134200_Q2irMtXQYXo0s49I3UHOwiBV2KDzrTa7.jpg);
+  height: 420px;
+  background-size: cover;
+  background-position: center;
 }
 .dropdown {
   position: relative;
@@ -66,9 +129,132 @@ body {
 }
 
 .dropdown-content a:hover {
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: #b30059;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block; /* Show the dropdown on hover */
+  display: block;
+}
+h1{
+  text-align: center;
+}
+p{
+  text-align: center;
+  font-size: small;
+}
+.arrow-down{
+  text-align: center;
+}
+
+.alt-card-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2px; */
+  margin: 3px 70px;
+}
+
+.alt-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* gap: 20px; */
+}
+
+.alt-card {
+  background-color: #fffafa;
+  border-radius: 5px;
+  /* padding: 20px; */
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.alt-card:hover {
+  background-color: #e91e63;
+  color: white;
+  transform: translateY(-5px);
+}
+
+.alt-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.alt-card h3 {
+  color: #8b1f4a;
+  margin-bottom: 10px;
+}
+
+.alt-card p {
+  color: #444;
+  font-size: 15px;
+}
+.promo-banner {
+  margin-top: 10%;
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.promo-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.promo-text {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  text-align: right;
+  color: #d22222;
+  font-family: Arial, sans-serif;
+}
+
+.promo-text h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.promo-text p {
+  font-size: 20px;
+  margin: 5px 0 15px;
+}
+
+.promo-text button {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.promo-text button:hover {
+  background: white;
+  color: #e91e63;
+}
+
+.booking-form {
+  background: white;
+  padding: 20px;
+}
+
+.booking-form input,
+.booking-form button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: 1px solid rgb(232, 221, 221);
+  border-radius: 4px;
+}
+
+.booking-form button {
+  background-color: #ff0057;
+  color: white;
+  font-weight: bold;
 }
